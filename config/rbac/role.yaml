@@ -1,0 +1,43 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - bgdeploy.swallowlab.com
+  resources:
+  - bgdeploys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - bgdeploy.swallowlab.com
+  resources:
+  - bgdeploys/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - bgdeploy.swallowlab.com
+  resources:
+  - bgdeploys/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - create
+  - get
+  - list
+  - update

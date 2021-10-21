@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bgdeploy-xds4
+subjects:
+- kind: ServiceAccount
+  name: bgdeploy-xds4
+roleRef:
+  kind: Role
+  name: bgdeploy-xds4
+  apiGroup: rbac.authorization.k8s.io

@@ -1,0 +1,19 @@
+domain: swallowlab.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: bgdeploy-xds4
+repo: bgdeploy-xds4
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: swallowlab.com
+  group: bgdeploy
+  kind: BGDeploy
+  path: bgdeploy-xds4/api/v1alpha1
+  version: v1alpha1
+version: "3"

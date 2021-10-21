@@ -1,0 +1,24 @@
+# permissions for end users to edit bgdeploys.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: bgdeploy-editor-role
+rules:
+- apiGroups:
+  - bgdeploy.swallowlab.com
+  resources:
+  - bgdeploys
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - bgdeploy.swallowlab.com
+  resources:
+  - bgdeploys/status
+  verbs:
+  - get

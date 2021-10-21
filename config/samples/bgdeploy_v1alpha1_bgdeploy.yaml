@@ -1,0 +1,7 @@
+apiVersion: bgdeploy.swallowlab.com/v1alpha1
+kind: BGDeploy
+metadata:
+  name: bgdeploy-sample
+spec:
+  # Add fields here
+  foo: bar
